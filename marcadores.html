@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcadores</title>
+</head>
+<body>
+    <ul>
+        {% for marcador in marcadores %}
+        <li><a href="{{ url_for('ir_a_marcador', lat=marcador.lat, lon=marcador.lon) }}">
+            {{ marcador.categoria }} - {{ marcador.descripcion }}
+        </a></li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
